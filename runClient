@@ -1,0 +1,3 @@
+#!/usr/bin/env php
+<?php
+passthru('php -S localhost:80 -t "./client"');

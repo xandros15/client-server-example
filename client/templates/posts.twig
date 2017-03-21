@@ -1,0 +1,9 @@
+{% extends 'base.twig' %}
+
+{% block title %}Wiele postów{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        {% include '_post.twig' %}
+    {% endfor %}
+{% endblock %}

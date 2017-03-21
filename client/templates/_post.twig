@@ -1,0 +1,14 @@
+{#endpoint post#}
+
+<article id="{{ post.id }}">
+    <header><h2>{{ post.title }}</h2>
+        <section>Autor: {{ post.author }}</section>
+    </header>
+    <section>
+        <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="thumbnail">
+        {% for paragraph in post.content %}
+            <p>{{ paragraph }}</p>
+        {% endfor %}
+    </section>
+    <footer>Utowrzony {{ post.created_at|join }}, Zaktualizowany {{ post.updated_at|join }}</footer>
+</article>
