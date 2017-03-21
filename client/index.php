@@ -11,12 +11,16 @@
  */
 require_once __DIR__ . '/../vendor/autoload.php';
 
+/**
+ * @see https://www.slimframework.com/docs/concepts/di.html
+ */
 $app = new \Slim\App([
     'settings' => [
         'displayErrorDetails' => true,
     ],
     /** Server URI. Make Same as uri of your server service  */
     'server' => 'localhost:8080',
+    /** @see http://docs.guzzlephp.org/en/latest/quickstart.html#creating-a-client */
     'guzzle' => function ($container) {
         return new \GuzzleHttp\Client([
             'base_uri' => $container['server'], //this is variable from above
